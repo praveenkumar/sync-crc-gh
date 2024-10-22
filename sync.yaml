@@ -1,0 +1,101 @@
+# define GitHub Project v2 to Jira Project mapping
+# It is used to extract the sprint, story points and status mapping
+githubProjects:
+  - name: CRC Planning
+    storyPoints:
+      fieldName: Story Points
+      type: number
+    status:
+      fieldName: Status
+      type: singleSelect
+    sprint:
+      fieldName: Sprint
+      type: iteration
+
+statusTypeMappings:
+  - name: CRC Status Mapping
+    # default is Backlog if no mapping is found
+    default: Backlog
+    mapping:
+      - fromGithub: 📋 Backlog
+        toJira: Backlog
+      - fromGithub: 📅 Planned
+        toJira: Backlog
+      - fromGithub: 🚧 In Progress
+        toJira: In Progress
+      - fromGithub: 🚥 In Review
+        toJira: Review
+      - fromGithub: ⏳On Hold
+        toJira: Backlog
+      - fromGithub: ✔️ Done
+        toJira: Closed
+      - fromGithub: ⏱Postponed
+        toJira: Backlog
+
+
+
+issuesTypeMappings:
+  - name: CRC Issue Mapping
+    default: Task
+    mapping:
+      - fromGithubLabel: kind/epic⚡
+        toJira: Epic
+      - fromGithubLabel: kind/feature 💡
+        toJira: Feature
+      - fromGithubLabel: kind/bug 🐞
+        toJira: Bug
+      - fromGithubLabel: kind/enhancement ✨
+        toJira: Enhancement
+      - fromGithubLabel: kind/release 🎉
+        toJira: Release Milestone
+      - fromGithubLabel: kind/task ☑️
+        toJira: Task
+
+syncProjects:
+  - name: "CRC"
+    github:
+      owner: crc-org
+      repo: crc
+      project: CRC Planning
+      afterDate: 2022-01-01
+    useMapping:
+     issueType: CRC Issue Mapping
+     statusType: CRC Status Mapping
+    jira:
+      projectKey: CRC
+      component: crc
+      globalIdPrefix: PODMAN-DESKTOP
+      sprintBoard: CRC board
+    maxBatchSize: 200
+    
+  - name: "CRC internal"
+    github:
+      owner: crc-org
+      repo: crc-internal
+      project: CRC Planning
+      afterDate: 2022-01-01
+    useMapping:
+     issueType: CRC Issue Mapping
+     statusType: CRC Status Mapping
+    jira:
+      projectKey: CRC
+      component: Internal
+      globalIdPrefix: CRC
+      sprintBoard: CRC board
+    maxBatchSize: 200
+
+  - name: "snc"
+    github:
+      owner: crc-org
+      repo: snc
+      project: CRC Planning
+      afterDate: 2022-01-01
+    useMapping:
+     issueType: CRC Issue Mapping
+     statusType: CRC Status Mapping
+    jira:
+      projectKey: CRC
+      component: snc
+      globalIdPrefix: SNC
+      sprintBoard: CRC board
+    maxBatchSize: 100

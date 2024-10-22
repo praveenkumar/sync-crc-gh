@@ -1,7 +1,7 @@
 # define GitHub Project v2 to Jira Project mapping
 # It is used to extract the sprint, story points and status mapping
 githubProjects:
-  - name: CRC Planning
+  - name: "Project planning: crc"
     storyPoints:
       fieldName: Story Points
       type: number
@@ -54,7 +54,7 @@ syncProjects:
     github:
       owner: crc-org
       repo: crc
-      project: CRC Planning
+      project: "Project planning: crc"
       afterDate: 2022-01-01
     useMapping:
      issueType: CRC Issue Mapping
@@ -70,7 +70,7 @@ syncProjects:
     github:
       owner: crc-org
       repo: crc-internal
-      project: CRC Planning
+      project: "Project planning: crc"
       afterDate: 2022-01-01
     useMapping:
      issueType: CRC Issue Mapping
@@ -86,7 +86,7 @@ syncProjects:
     github:
       owner: crc-org
       repo: snc
-      project: CRC Planning
+      project: "Project planning: crc"
       afterDate: 2022-01-01
     useMapping:
      issueType: CRC Issue Mapping

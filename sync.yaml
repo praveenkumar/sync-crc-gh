@@ -15,22 +15,22 @@ githubProjects:
 statusTypeMappings:
   - name: CRC Status Mapping
     # default is Backlog if no mapping is found
-    default: Backlog
+    default: OPEN
     mapping:
       - fromGithub: 📋 Backlog
-        toJira: Backlog
+        toJira: OPEN
       - fromGithub: 📅 Planned
-        toJira: Backlog
+        toJira: OPEN
       - fromGithub: 🚧 In Progress
-        toJira: In Progress
+        toJira: OPEN
       - fromGithub: 🚥 In Review
-        toJira: Review
+        toJira: OPEN
       - fromGithub: ⏳On Hold
-        toJira: Backlog
+        toJira: OPEN
       - fromGithub: ✔️ Done
-        toJira: Closed
+        toJira: CLOSED
       - fromGithub: ⏱Postponed
-        toJira: Backlog
+        toJira: OPEN
 
 
 

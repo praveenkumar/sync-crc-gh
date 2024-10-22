@@ -26,7 +26,7 @@ jobs:
           fi
 
       - name: Run GitHub to Jira Action
-        uses: benoitf/github-to-jira-action@debug
+        uses: benoitf/github-to-jira-action@next
         with:
           jira-host: ${{ secrets.JIRA_HOST }}
           jira-write-token: ${{ secrets.JIRA_WRITE_TOKEN }}

@@ -77,7 +77,7 @@ syncProjects:
      statusType: CRC Status Mapping
     jira:
       projectKey: CRC
-      component: Internal
+      component: crc-internal
       globalIdPrefix: CRC
       sprintBoard: CRC board
     maxBatchSize: 200

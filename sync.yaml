@@ -62,7 +62,7 @@ syncProjects:
     jira:
       projectKey: CRC
       component: crc
-      globalIdPrefix: PODMAN-DESKTOP
+      globalIdPrefix: CRC
       sprintBoard: CRC board
     maxBatchSize: 200
     

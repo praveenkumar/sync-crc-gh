@@ -40,14 +40,12 @@ issuesTypeMappings:
     mapping:
       - fromGithubLabel: kind/epic⚡
         toJira: Epic
-      - fromGithubLabel: kind/feature 💡
-        toJira: Feature
+      - fromGithubLabel: kind/Vulnerability 💡
+        toJira: Vulnerability
       - fromGithubLabel: kind/bug 🐞
         toJira: Bug
       - fromGithubLabel: kind/enhancement ✨
-        toJira: Enhancement
-      - fromGithubLabel: kind/release 🎉
-        toJira: Release Milestone
+        toJira: Story
       - fromGithubLabel: kind/task ☑️
         toJira: Task
 

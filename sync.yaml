@@ -17,36 +17,30 @@ statusTypeMappings:
     # default is Backlog if no mapping is found
     default: OPEN
     mapping:
-      - fromGithub: 📋 Backlog
+      - fromGithub: Todo
         toJira: OPEN
-      - fromGithub: 📅 Planned
+      - fromGithub: Work In Progress
+        toJira: CODING IN PROGRESS
+      - fromGithub: Ready for review
         toJira: OPEN
-      - fromGithub: 🚧 In Progress
+      - fromGithub: Hold
         toJira: OPEN
-      - fromGithub: 🚥 In Review
-        toJira: OPEN
-      - fromGithub: ⏳On Hold
-        toJira: OPEN
-      - fromGithub: ✔️ Done
+      - fromGithub: Done
         toJira: CLOSED
-      - fromGithub: ⏱Postponed
-        toJira: OPEN
-
-
 
 issuesTypeMappings:
   - name: CRC Issue Mapping
     default: Task
     mapping:
-      - fromGithubLabel: kind/epic⚡
+      - fromGithubLabel: kind/epic
         toJira: Epic
-      - fromGithubLabel: kind/Vulnerability 💡
+      - fromGithubLabel: kind/Vulnerability
         toJira: Vulnerability
-      - fromGithubLabel: kind/bug 🐞
+      - fromGithubLabel: kind/bug
         toJira: Bug
-      - fromGithubLabel: kind/enhancement ✨
+      - fromGithubLabel: kind/enhancement
         toJira: Story
-      - fromGithubLabel: kind/task ☑️
+      - fromGithubLabel: kind/task
         toJira: Task
 
 syncProjects:

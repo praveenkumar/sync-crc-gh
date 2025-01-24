@@ -15,15 +15,6 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - name: Restore state from previous run using GitHub variables (no secret inside)
-        run: |
-          if [ -z "${{ vars.SYNC_STATE }}" ]; then
-            echo "no previous persisted state"
-          else
-            echo "restoring previous sync state"
-            echo "${{ vars.SYNC_STATE }}" > sync-state.yaml
-            cat sync-state.yaml
-          fi
 
       - name: Run GitHub to Jira Action
         uses: benoitf/github-to-jira-action@next

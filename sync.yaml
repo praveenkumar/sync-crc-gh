@@ -49,7 +49,7 @@ syncProjects:
       owner: crc-org
       repo: crc
       project: "Project planning: crc"
-      afterDate: 2022-01-01
+      afterDate: 2024-12-01
     useMapping:
      issueType: CRC Issue Mapping
      statusType: CRC Status Mapping
@@ -65,7 +65,7 @@ syncProjects:
       owner: crc-org
       repo: crc-internal
       project: "Project planning: crc"
-      afterDate: 2022-01-01
+      afterDate: 2024-12-01
     useMapping:
      issueType: CRC Issue Mapping
      statusType: CRC Status Mapping
@@ -81,7 +81,7 @@ syncProjects:
       owner: crc-org
       repo: snc
       project: "Project planning: crc"
-      afterDate: 2022-01-01
+      afterDate: 2024-12-01
     useMapping:
      issueType: CRC Issue Mapping
      statusType: CRC Status Mapping
